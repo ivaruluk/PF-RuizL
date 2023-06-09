@@ -1,0 +1,40 @@
+// mixin
+
+@mixin letras($weight, $size, $color){
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+.descripcionCartas{
+    @include letras(400, 1.1em, rgb(140, 101, 3));
+}
+
+.horario{
+    @include letras(700, 1.2em, black);
+}
+
+
+// extend
+
+.locales{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid;
+}
+
+.localesRojo{
+    @extend .locales;
+    color: red;
+}
+
+.localesAzul{
+    @extend .locales;
+    color: blue;
+}
+
+.localesVerde{
+    @extend .locales;
+    color: green;
+}
